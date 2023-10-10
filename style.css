@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1c53a0;
+    flex-direction: column;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 50px 30px;
+    background: #0b2447;
+    border-radius: 10px;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    animation: form-animation 0.5s ease-in-out;
+    width: 50vh;
+}
+
+.form h1 {
+    font-family: Trashhand;
+    margin-top: 0px;
+    color: #56baf4;
+    letter-spacing: .3rem;
+}
+
+@keyframes form-animation {
+    from {
+        transform: rotateX(-30deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.input {
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    color: rgb(255, 255, 255);
+    border: 2px solid #3b8df2;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.input::placeholder {
+    color: #fff;
+}
+
+.input:hover,
+.input:focus {
+    border-color: #3b8df2;
+    background-color: transparent;
+    transform: scale(1.05) rotateY(20deg);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: rotateX(-10deg);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.submit:hover {
+    background-color: #0077be;
+    font-size: 17px;
+    transform: scale(1.05) rotateY(20deg) rotateX(10deg);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+label {
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: #86d3ff;
+    font-family: trashhand;
+    font-size: 3rem;
+    font-family: 600;
+    letter-spacing: .5rem;
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        transform: translateX(-30px);
+    }
+}
+
+h2 {
+    animation: jump 2s infinite;
+}
+
+
+.greeting-box {
+    background-color:  #0b2447;
+    border-radius: 10px;
+    padding: 20px;
+    height: 380px;
+    width: 400px;
+    margin: 50px auto;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Helvetica;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #86d3ff;
+}
+
+.greeting-box:hover {
+    box-shadow:-5px 40px 100px #56baf4;
+}
